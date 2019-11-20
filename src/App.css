@@ -1,0 +1,115 @@
+/* @import url('https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap'); */
+
+
+.App {
+  text-align: center;
+}
+
+.nav-bar {
+  position: fixed;
+  top: 0px;
+  height: 50px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  margin: 0px, 20px;
+  font-size: 14px;
+  color: white;
+  background-color: #212529;
+  /* opacity: .7; */
+}
+
+#logo {
+  color: #fed136;
+  font-family: 'Kaushan Script';
+  font-weight: bold;
+  margin-left: 20px;
+  font-size: 20px;
+}
+
+#menu-button {
+  background-color: #fed136;
+  height: 36px;
+  width: 80px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-right: 15px;
+  border-radius: 5px;
+  padding: 0px 5px;
+  box-sizing: border-box;
+  color: white;
+}
+
+#menu-button:focus {
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+
+.links {
+  width: 50vw;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+.masthead {
+  background-image: url("https://blackrockdigital.github.io/startbootstrap-agency/img/header-bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+  height: 60vh;
+}
+
+
+
+
+
+@media (max-width: 991.98px) {
+ /* menu button disappears and turns into links */
+ .links {
+   display:none;
+ }
+
+ .nav-bar {
+   padding: 0px 5vw;
+ }
+
+ .masthead{
+   height: 75vh;
+ }
+
+}
+
+@media(min-width: 576px) {
+
+}
+
+@media(max-width: 768px) {
+  .masthead{
+    height: 45vh;
+  }
+
+}
+
+@media (min-width: 992px) {
+  #menu-button{
+    display: none;
+  }
+
+  .nav-bar {
+    padding: 0px 50px;
+  }
+
+  .masthead{
+    height: 70vh;
+  }
+}
+
+@media (min-width: 1200px) {
+
+}

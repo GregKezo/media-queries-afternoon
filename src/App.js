@@ -11,10 +11,15 @@ class App extends React.Component {
   constructor(props){
     super(props)
     this.state= {
-      name: 'hi'
+      toggleMenu: false
     }
   }
 
+  handleToggle = () => {
+    this.setState({
+      toggleMenu: !this.state.toggleMenu
+    })
+  }
 
   render() {
     return (
@@ -28,10 +33,25 @@ class App extends React.Component {
             <a>TEAM</a>
             <a>CONTACT</a>
           </nav>
-          <button id="menu-button">
+          <button id="menu-button" onClick={this.handleToggle}>
             <span>MENU </span>
             <FontAwesomeIcon icon="bars" id='hamburger' onClick={this.handleToggle}/>
           </button>
+          {!this.state.toggleMenu
+            ? (
+              <>
+              </>
+            )
+            : (
+              <nav id="pop-out-menu">
+                <a>SERVICES</a>
+                <a>PORTFOLIO</a>
+                <a>ABOUT</a>
+                <a>TEAM</a>
+                <a>CONTACT</a>
+              </nav>
+            )
+          }
         </nav>
         <header className="masthead">
           <div className="container">

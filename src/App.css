@@ -3,6 +3,7 @@
 
 .App {
   text-align: center;
+  height: 200vh;
 }
 
 .nav-bar {
@@ -14,7 +15,7 @@
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
-  margin: 0px, 20px;
+  padding-left: 10vw;
   font-size: 14px;
   color: white;
   background-color: #212529;
@@ -55,18 +56,50 @@
   justify-content: space-evenly;
 }
 
+#pop-out-menu {
+  height: 225px;
+  width: 110vw;
+  position: fixed;
+  top: 50px;
+  margin-left: -10vw;
+  margin-right: -10vw;
+  padding-left: 13vw;
+  padding-top: -5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  background-color: #212529;
+  box-sizing: border-box;
+  font-size: 16px;
+
+  animation-name: menu;
+  animation-duration: 0.25s;
+  animation-timing-function: linear;
+}
+
 
 .masthead {
   background-image: url("https://blackrockdigital.github.io/startbootstrap-agency/img/header-bg.jpg");
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center center;
+  /* background-repeat: no-repeat; */
+  /* background-attachment: scroll; */
+  background-position: center ;
   background-size: cover;
   height: 60vh;
 }
 
 
 
+
+@keyframes menu {
+  from {
+    height: 0px;
+    transform: scale(1, 0)
+  }
+  to {
+    transform: scale(1)
+  }
+}
 
 
 @media (max-width: 991.98px) {
@@ -100,9 +133,13 @@
   #menu-button{
     display: none;
   }
+  #pop-out-menu{
+    display: none;
+  }
 
   .nav-bar {
     padding: 0px 50px;
+    background-color: initial;
   }
 
   .masthead{
@@ -113,3 +150,4 @@
 @media (min-width: 1200px) {
 
 }
+

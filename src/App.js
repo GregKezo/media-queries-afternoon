@@ -55,7 +55,9 @@ class App extends React.Component {
         </nav>
         <header className="masthead">
           <div className="container">
-            
+            <div className = "ital-header">Welcome to our Studio!</div>
+            <div className="caps-header">IT'S NICE TO MEET YOU</div>
+            <button className="info-button">TELL ME MORE</button>
 
           </div>
         </header>
